@@ -6,51 +6,98 @@
     <title>Malla Arqueología UC</title>
     <style>
         :root {
-            --celeste: rgba(202, 240, 248, 0.85);
-            --verde-aprobado: rgba(96, 108, 56, 0.9);
-            --amarillo-ofg: rgba(233, 196, 106, 0.85);
-            --marron-optativo: rgba(127, 85, 57, 0.85);
-            --azul-terminal: rgba(0, 48, 73, 0.85);
+            --malla-base: rgba(144, 169, 85, 0.85);       /* #90a955 (1° a 4° año) */
+            --malla-quinto: rgba(79, 119, 45, 0.9);       /* #4f772d (5° año) */
+            --verde-aprobado: rgba(49, 87, 44, 0.95);     /* Verde más profundo para diferenciar aprobados */
+            --rosa-ofg: rgba(238, 190, 208, 0.85);        /* #eebed0 (OFG) */
+            --amarillo-opr: rgba(233, 196, 106, 0.85);    /* #e9c46a (OPR) */
             --gris-bloqueado: rgba(209, 209, 209, 0.8);
-            --texto-oscuro: #283618; 
+            --texto-oscuro: #1d2d14; 
         }
 
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #fefae0; margin: 0; padding: 15px; color: var(--texto-oscuro); }
+        body { 
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+            background-color: #edf6f9; /* Nuevo color de fondo */
+            margin: 0; 
+            padding: 15px; 
+            color: var(--texto-oscuro); 
+        }
+
         header { text-align: center; margin-bottom: 20px; }
         h1 { margin: 0 0 5px 0; font-weight: 800; font-size: 2.1rem; }
-        .subtitulo { font-size: 1rem; color: #606c38; margin-bottom: 15px; font-weight: 600; }
+        .subtitulo { font-size: 1rem; color: #4f772d; margin-bottom: 15px; font-weight: 600; }
 
-        .avance-card { background: rgba(255, 255, 255, 0.5); max-width: 400px; margin: 0 auto 10px auto; padding: 12px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.03); text-align: center; border: 1px solid rgba(0,0,0,0.05); }
+        .avance-card { 
+            background: rgba(255, 255, 255, 0.65); 
+            max-width: 400px; 
+            margin: 0 auto 10px auto; 
+            padding: 12px; 
+            border-radius: 10px; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03); 
+            text-align: center; 
+            border: 1px solid rgba(0,0,0,0.06); 
+        }
         .avance-label { font-weight: 700; margin-bottom: 8px; display: block; font-size: 0.9rem; }
-        .progress-container { background-color: rgba(0,0,0,0.05); border-radius: 20px; height: 12px; overflow: hidden; }
-        #progress-bar { height: 100%; width: 0%; background-color: #606c38; transition: width 0.8s ease; }
+        .progress-container { background-color: rgba(0,0,0,0.07); border-radius: 20px; height: 12px; overflow: hidden; }
+        #progress-bar { height: 100%; width: 0%; background-color: #4f772d; transition: width 0.8s ease; }
 
         /* LEYENDA */
         .leyenda { display: flex; flex-direction: column; align-items: center; gap: 8px; margin-bottom: 25px; }
         .leyenda-items { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
         .leyenda-item { display: flex; align-items: center; gap: 6px; font-size: 0.8rem; font-weight: 600; }
-        .circulo { width: 12px; height: 12px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.1); }
-        .nota-edicion { font-size: 0.8rem; font-weight: 700; color: #bc6c25; margin-top: 5px; text-align: center; max-width: 500px; }
+        .circulo { width: 12px; height: 12px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.12); }
+        .nota-edicion { font-size: 0.8rem; font-weight: 700; color: #4f772d; margin-top: 5px; text-align: center; max-width: 500px; }
 
         .malla-container { overflow-x: auto; padding-bottom: 30px; }
         .malla-wrapper-horizontal { display: flex; gap: 15px; padding: 10px; width: max-content; }
 
-        .año-seccion { background: rgba(255, 255, 255, 0.4); border-radius: 8px; border: 1px solid rgba(0,0,0,0.1); flex-shrink: 0; }
-        .año-titulo { background: #283618; color: #fefae0; text-align: center; padding: 8px; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; border-radius: 8px 8px 0 0; }
+        .año-seccion { 
+            background: rgba(255, 255, 255, 0.55); 
+            border-radius: 8px; 
+            border: 1px solid rgba(0,0,0,0.08); 
+            flex-shrink: 0; 
+        }
+        .año-titulo { 
+            background: #2b3a22; 
+            color: #edf6f9; 
+            text-align: center; 
+            padding: 8px; 
+            font-size: 0.9rem; 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            border-radius: 8px 8px 0 0; 
+        }
 
         .semestres-wrapper { display: flex; padding: 10px; gap: 10px; }
         .semestre { width: 145px; display: flex; flex-direction: column; gap: 8px; }
-        .semestre-header { background: rgba(0,0,0,0.05); color: var(--texto-oscuro); text-align: center; padding: 4px; font-size: 0.8rem; font-weight: 800; border-radius: 4px; border: 1px solid rgba(0,0,0,0.1); margin-bottom: 4px; }
+        .semestre-header { 
+            background: rgba(0,0,0,0.05); 
+            color: var(--texto-oscuro); 
+            text-align: center; 
+            padding: 4px; 
+            font-size: 0.8rem; 
+            font-weight: 800; 
+            border-radius: 4px; 
+            border: 1px solid rgba(0,0,0,0.08); 
+            margin-bottom: 4px; 
+        }
 
         .ramo {
             position: relative; padding: 10px 6px; border-radius: 5px; font-size: 0.75rem; font-weight: 700; text-align: center; min-height: 55px;
-            display: flex; align-items: center; justify-content: center; cursor: pointer; border-bottom: 3px solid rgba(0,0,0,0.1); transition: all 0.2s ease; line-height: 1.1; background-color: var(--celeste);
+            display: flex; align-items: center; justify-content: center; cursor: pointer; border-bottom: 3px solid rgba(0,0,0,0.12); transition: all 0.2s ease; line-height: 1.1; 
+            background-color: var(--malla-base);
+            color: #ffffff;
         }
 
-        .ramo.ofg { background-color: var(--amarillo-ofg); }
-        .ramo.optativo { background-color: var(--marron-optativo); color: white; }
-        .ramo.terminal { background-color: var(--azul-terminal); color: white; }
-        .ramo.aprobado { background-color: var(--verde-aprobado) !important; color: #fefae0 !important; border-bottom-color: rgba(0,0,0,0.15); }
+        .ramo.ofg { background-color: var(--rosa-ofg); color: var(--texto-oscuro); }
+        .ramo.optativo { background-color: var(--amarillo-opr); color: var(--texto-oscuro); }
+        .ramo.terminal { background-color: var(--malla-quinto); color: #ffffff; }
+        .ramo.aprobado { 
+            background-color: var(--verde-aprobado) !important; 
+            color: #ffffff !important; 
+            border-bottom-color: rgba(0,0,0,0.25);
+            box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.35);
+        }
 
         .ramo.bloqueado { background-color: var(--gris-bloqueado) !important; color: #777 !important; cursor: not-allowed; border-bottom-color: #bbb; }
         .ramo.bloqueado::before { content: "🔒 "; margin-right: 2px; }
@@ -58,15 +105,15 @@
         .ramo::after {
             content: "Sigla: " attr(data-sigla) "\A Créditos: " attr(data-creditos) "\A Requisito: " attr(data-req-name);
             white-space: pre-wrap; position: absolute; bottom: 110%; left: 50%; transform: translateX(-50%);
-            background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(6px); color: #fff; padding: 10px;
+            background: rgba(0, 0, 0, 0.75); backdrop-filter: blur(6px); color: #fff; padding: 10px;
             border-radius: 6px; font-size: 0.72rem; font-weight: 400; width: 190px; z-index: 1000;
             opacity: 0; transition: 0.2s; pointer-events: none; border: 1px solid rgba(255,255,255,0.1); text-align: left;
         }
         .ramo:hover::after { opacity: 1; }
-        .ramo:hover:not(.bloqueado) { transform: translateY(-2px); filter: brightness(1.03); }
+        .ramo:hover:not(.bloqueado) { transform: translateY(-2px); filter: brightness(1.04); }
 
         .malla-container::-webkit-scrollbar { height: 10px; }
-        .malla-container::-webkit-scrollbar-thumb { background: #bc6c25; border-radius: 10px; border: 2px solid #fefae0; }
+        .malla-container::-webkit-scrollbar-thumb { background: #90a955; border-radius: 10px; border: 2px solid #edf6f9; }
     </style>
 </head>
 <body>
@@ -83,13 +130,14 @@
         <div class="leyenda-items">
             <div class="leyenda-item">
                 <div style="display:flex; gap:2px">
-                    <div class="circulo" style="background: var(--celeste);"></div>
-                    <div class="circulo" style="background: var(--azul-terminal);"></div>
+                    <div class="circulo" style="background: var(--malla-base);"></div>
+                    <div class="circulo" style="background: var(--malla-quinto);"></div>
                 </div>
                 Ramo de malla
             </div>
-            <div class="leyenda-item"><div class="circulo" style="background: var(--amarillo-ofg);"></div> OFG</div>
-            <div class="leyenda-item"><div class="circulo" style="background: var(--marron-optativo);"></div> OPR</div>
+            <div class="leyenda-item"><div class="circulo" style="background: var(--rosa-ofg);"></div> OFG</div>
+            <div class="leyenda-item"><div class="circulo" style="background: var(--amarillo-opr);"></div> OPR</div>
+            <div class="leyenda-item"><div class="circulo" style="background: var(--verde-aprobado);"></div> Aprobado</div>
         </div>
         <div class="nota-edicion">Ojo: para editar los OFGs y OPRs haz clic derecho sobre ellos y rellénalos como tú quieras.</div>
     </div>
@@ -240,7 +288,6 @@
     function actualizar() {
         const ramos = document.querySelectorAll('.ramo');
         
-        // Lógica preparada para cuando agregues prerrequisitos
         ramos.forEach(r => {
             const reqId = r.getAttribute('data-req');
             if (reqId) {
@@ -254,14 +301,12 @@
             }
         });
 
-        // Avance de carrera
         let aprobados = 0;
         ramos.forEach(r => { if (r.classList.contains('aprobado')) aprobados++; });
         const porcentaje = Math.round((aprobados / ramos.length) * 100) || 0;
         document.getElementById('progress-bar').style.width = porcentaje + '%';
         document.getElementById('label-avance').innerText = `Avance de Carrera: ${porcentaje}%`;
 
-        // Guardar estado independiente de la malla de Antropología
         const save = {};
         ramos.forEach(r => {
             save[r.id] = {
