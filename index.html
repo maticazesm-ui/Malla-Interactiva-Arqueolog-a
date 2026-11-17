@@ -8,16 +8,17 @@
         :root {
             --malla-base: rgba(144, 169, 85, 0.85);       /* #90a955 (1° a 4° año) */
             --malla-quinto: rgba(79, 119, 45, 0.9);       /* #4f772d (5° año) */
-            --verde-aprobado: rgba(49, 87, 44, 0.95);     /* Verde más profundo para diferenciar aprobados */
+            --verde-aprobado: rgba(49, 87, 44, 0.95);     /* Verde bosque al aprobar */
             --rosa-ofg: rgba(238, 190, 208, 0.85);        /* #eebed0 (OFG) */
             --amarillo-opr: rgba(233, 196, 106, 0.85);    /* #e9c46a (OPR) */
+            --naranjo-header: #fb8500;                    /* Nuevo color para años y semestres */
             --gris-bloqueado: rgba(209, 209, 209, 0.8);
             --texto-oscuro: #1d2d14; 
         }
 
         body { 
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
-            background-color: #edf6f9; /* Nuevo color de fondo */
+            background-color: #edf6f9; 
             margin: 0; 
             padding: 15px; 
             color: var(--texto-oscuro); 
@@ -41,7 +42,7 @@
         .progress-container { background-color: rgba(0,0,0,0.07); border-radius: 20px; height: 12px; overflow: hidden; }
         #progress-bar { height: 100%; width: 0%; background-color: #4f772d; transition: width 0.8s ease; }
 
-        /* LEYENDA */
+        /* LEYENDA SIN "APROBADO" */
         .leyenda { display: flex; flex-direction: column; align-items: center; gap: 8px; margin-bottom: 25px; }
         .leyenda-items { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
         .leyenda-item { display: flex; align-items: center; gap: 6px; font-size: 0.8rem; font-weight: 600; }
@@ -58,8 +59,8 @@
             flex-shrink: 0; 
         }
         .año-titulo { 
-            background: #2b3a22; 
-            color: #edf6f9; 
+            background-color: var(--naranjo-header); 
+            color: #ffffff; 
             text-align: center; 
             padding: 8px; 
             font-size: 0.9rem; 
@@ -71,14 +72,13 @@
         .semestres-wrapper { display: flex; padding: 10px; gap: 10px; }
         .semestre { width: 145px; display: flex; flex-direction: column; gap: 8px; }
         .semestre-header { 
-            background: rgba(0,0,0,0.05); 
-            color: var(--texto-oscuro); 
+            background-color: var(--naranjo-header); 
+            color: #ffffff; 
             text-align: center; 
             padding: 4px; 
             font-size: 0.8rem; 
             font-weight: 800; 
             border-radius: 4px; 
-            border: 1px solid rgba(0,0,0,0.08); 
             margin-bottom: 4px; 
         }
 
@@ -137,7 +137,6 @@
             </div>
             <div class="leyenda-item"><div class="circulo" style="background: var(--rosa-ofg);"></div> OFG</div>
             <div class="leyenda-item"><div class="circulo" style="background: var(--amarillo-opr);"></div> OPR</div>
-            <div class="leyenda-item"><div class="circulo" style="background: var(--verde-aprobado);"></div> Aprobado</div>
         </div>
         <div class="nota-edicion">Ojo: para editar los OFGs y OPRs haz clic derecho sobre ellos y rellénalos como tú quieras.</div>
     </div>
