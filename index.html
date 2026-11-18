@@ -109,7 +109,7 @@
             content: "Sigla: " attr(data-sigla) "\A Créditos: " attr(data-creditos) "\A Requisito: " attr(data-req-name);
             white-space: pre-wrap; position: absolute; bottom: 110%; left: 50%; transform: translateX(-50%);
             background: rgba(0, 0, 0, 0.75); backdrop-filter: blur(6px); color: #fff; padding: 10px;
-            border-radius: 6px; font-size: 0.72rem; font-weight: 400; width: 190px; z-index: 1000;
+            border-radius: 6px; font-size: 0.72rem; font-weight: 400; width: 205px; z-index: 1000;
             opacity: 0; transition: 0.2s; pointer-events: none; border: 1px solid rgba(255,255,255,0.1); text-align: left;
         }
         .ramo:hover::after { opacity: 1; }
@@ -154,19 +154,19 @@
             <div class="semestres-wrapper">
                 <div class="semestre">
                     <div class="semestre-header">I</div>
-                    <div id="arq1_1" class="ramo" data-sigla="SOL100" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq1_1')">Paradigmas Sociológicos</div>
-                    <div id="arq1_2" class="ramo" data-sigla="MAT0100" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq1_2')">Razonamiento Cuantitativo</div>
-                    <div id="arq1_3" class="ramo" data-sigla="ANT100" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq1_3')">Paradigmas Antropológicos</div>
-                    <div id="arq1_4" class="ramo" data-sigla="ANT120" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq1_4')">Introducción a la Arqueología</div>
-                    <div id="arq1_5" class="ramo" data-sigla="ANT110" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq1_5')">Introducción a la Antropología Biológica</div>
+                    <div id="arq1_1" class="ramo" data-sigla="SOL100" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq1_1')">Paradigmas Sociológicos</div>
+                    <div id="arq1_2" class="ramo" data-sigla="MAT0100" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq1_2')">Razonamiento Cuantitativo</div>
+                    <div id="arq1_3" class="ramo" data-sigla="ANT100" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq1_3')">Paradigmas Antropológicos</div>
+                    <div id="arq1_4" class="ramo" data-sigla="ANT120" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq1_4')">Introducción a la Arqueología</div>
+                    <div id="arq1_5" class="ramo" data-sigla="ANT110" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq1_5')">Introducción a la Antropología Biológica</div>
                 </div>
                 <div class="semestre">
                     <div class="semestre-header">II</div>
-                    <div id="arq2_1" class="ramo" data-sigla="SOL214" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq2_1')">Sociedad y Cultura Latinoamericana</div>
-                    <div id="arq2_2" class="ramo" data-sigla="ANT1610" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq2_2')">Teoría Arqueológica y Cultura Material Moderna</div>
-                    <div id="arq2_3" class="ramo" data-sigla="ANT1600" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq2_3')">Prehistoria General</div>
-                    <div id="arq2_4" class="ramo ofg" data-sigla="-" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq2_4')" oncontextmenu="editEditable(event, 'arq2_4')">Filosofía: ¿Para Qué?</div>
-                    <div id="arq2_5" class="ramo ofg" data-sigla="-" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq2_5')" oncontextmenu="editEditable(event, 'arq2_5')">OFG</div>
+                    <div id="arq2_1" class="ramo" data-sigla="SOL214" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq2_1')">Sociedad y Cultura Latinoamericana</div>
+                    <div id="arq2_2" class="ramo" data-sigla="ANT1610" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq2_2')">Teoría Arqueológica y Cultura Material Moderna</div>
+                    <div id="arq2_3" class="ramo" data-sigla="ANT1600" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq2_3')">Prehistoria General</div>
+                    <div id="arq2_4" class="ramo ofg" data-sigla="-" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq2_4')" oncontextmenu="editEditable(event, 'arq2_4')">Filosofía: ¿Para Qué?</div>
+                    <div id="arq2_5" class="ramo ofg" data-sigla="-" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq2_5')" oncontextmenu="editEditable(event, 'arq2_5')">OFG</div>
                 </div>
             </div>
         </div>
@@ -177,19 +177,19 @@
             <div class="semestres-wrapper">
                 <div class="semestre">
                     <div class="semestre-header">III</div>
-                    <div id="arq3_1" class="ramo" data-sigla="ANT135" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq3_1')">Antropología del Lenguaje</div>
-                    <div id="arq3_2" class="ramo" data-sigla="SOL126S" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq3_2')">Metodología de la Investigación Social</div>
-                    <div id="arq3_3" class="ramo" data-sigla="ANT140" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq3_3')">Teoría Antropológica I</div>
-                    <div id="arq3_4" class="ramo" data-sigla="ANT107" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq3_4')">Ética Social</div>
-                    <div id="arq3_5" class="ramo ofg" data-sigla="-" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq3_5')" oncontextmenu="editEditable(event, 'arq3_5')">Electivo Formación Teológica</div>
+                    <div id="arq3_1" class="ramo" data-sigla="ANT135" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq3_1')">Antropología del Lenguaje</div>
+                    <div id="arq3_2" class="ramo" data-sigla="SOL126S" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq3_2')">Metodología de la Investigación Social</div>
+                    <div id="arq3_3" class="ramo" data-sigla="ANT140" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq3_3')">Teoría Antropológica I</div>
+                    <div id="arq3_4" class="ramo" data-sigla="ANT107" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq3_4')">Ética Social</div>
+                    <div id="arq3_5" class="ramo ofg" data-sigla="-" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq3_5')" oncontextmenu="editEditable(event, 'arq3_5')">Electivo Formación Teológica</div>
                 </div>
                 <div class="semestre">
                     <div class="semestre-header">IV</div>
-                    <div id="arq4_1" class="ramo" data-sigla="ANT302Q" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq4_1')">Prehistoria de América</div>
-                    <div id="arq4_2" class="ramo" data-sigla="ANT170" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq4_2')">Introducción a la Etnografía</div>
-                    <div id="arq4_3" class="ramo" data-sigla="ANT150" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq4_3')">Teoría Antropológica II</div>
-                    <div id="arq4_4" class="ramo ofg" data-sigla="-" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq4_4')" oncontextmenu="editEditable(event, 'arq4_4')">OFG</div>
-                    <div id="arq4_5" class="ramo ofg" data-sigla="-" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq4_5')" oncontextmenu="editEditable(event, 'arq4_5')">OFG</div>
+                    <div id="arq4_1" class="ramo" data-sigla="ANT302Q" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq4_1')">Prehistoria de América</div>
+                    <div id="arq4_2" class="ramo" data-sigla="ANT170" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq4_2')">Introducción a la Etnografía</div>
+                    <div id="arq4_3" class="ramo" data-sigla="ANT150" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq4_3')">Teoría Antropológica II</div>
+                    <div id="arq4_4" class="ramo ofg" data-sigla="-" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq4_4')" oncontextmenu="editEditable(event, 'arq4_4')">OFG</div>
+                    <div id="arq4_5" class="ramo ofg" data-sigla="-" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq4_5')" oncontextmenu="editEditable(event, 'arq4_5')">OFG</div>
                 </div>
             </div>
         </div>
@@ -200,19 +200,19 @@
             <div class="semestres-wrapper">
                 <div class="semestre">
                     <div class="semestre-header">V</div>
-                    <div id="arq5_1" class="ramo" data-sigla="-" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq5_1')">Arqueología Avanzada I</div>
-                    <div id="arq5_2" class="ramo" data-sigla="-" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq5_2')">Interpretación en Arqueología</div>
-                    <div id="arq5_3" class="ramo" data-sigla="-" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq5_3')">Arqueología Cuantitativa</div>
-                    <div id="arq5_4" class="ramo ofg" data-sigla="-" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq5_4')" oncontextmenu="editEditable(event, 'arq5_4')">OFG</div>
-                    <div id="arq5_5" class="ramo ofg" data-sigla="-" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq5_5')" oncontextmenu="editEditable(event, 'arq5_5')">OFG</div>
+                    <div id="arq5_1" class="ramo" data-sigla="-" data-creditos="10" data-req="arq1_4,arq2_3,arq2_2,arq4_1" data-req-name="Intro. Arqueología, Prehistoria General, Teoría Arqueológica y Prehistoria de América" onclick="toggle('arq5_1')">Arqueología Avanzada I</div>
+                    <div id="arq5_2" class="ramo" data-sigla="-" data-creditos="10" data-req="arq1_4,arq2_3,arq2_2,arq4_1" data-req-name="Intro. Arqueología, Prehistoria General, Teoría Arqueológica y Prehistoria de América" onclick="toggle('arq5_2')">Interpretación en Arqueología</div>
+                    <div id="arq5_3" class="ramo" data-sigla="-" data-creditos="10" data-req="arq1_4,arq2_3,arq2_2,arq4_1" data-req-name="Intro. Arqueología, Prehistoria General, Teoría Arqueológica y Prehistoria de América" onclick="toggle('arq5_3')">Arqueología Cuantitativa</div>
+                    <div id="arq5_4" class="ramo ofg" data-sigla="-" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq5_4')" oncontextmenu="editEditable(event, 'arq5_4')">OFG</div>
+                    <div id="arq5_5" class="ramo ofg" data-sigla="-" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq5_5')" oncontextmenu="editEditable(event, 'arq5_5')">OFG</div>
                 </div>
                 <div class="semestre">
                     <div class="semestre-header">VI</div>
-                    <div id="arq6_1" class="ramo" data-sigla="-" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq6_1')">Arqueología Avanzada II</div>
-                    <div id="arq6_2" class="ramo" data-sigla="-" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq6_2')">Arqueologías Simbólicas y Materialidades</div>
-                    <div id="arq6_3" class="ramo" data-sigla="-" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq6_3')">Arqueometría</div>
-                    <div id="arq6_4" class="ramo" data-sigla="-" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq6_4')">Arqueología de Chile I</div>
-                    <div id="arq6_5" class="ramo ofg" data-sigla="-" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq6_5')" oncontextmenu="editEditable(event, 'arq6_5')">OFG</div>
+                    <div id="arq6_1" class="ramo" data-sigla="-" data-creditos="10" data-req="arq5_1,arq5_3" data-req-name="Arqueología Avanzada I y Arqueología Cuantitativa" onclick="toggle('arq6_1')">Arqueología Avanzada II</div>
+                    <div id="arq6_2" class="ramo" data-sigla="-" data-creditos="10" data-req="arq5_2" data-req-name="Interpretación en Arqueología" onclick="toggle('arq6_2')">Arqueologías Simbólicas y Materialidades</div>
+                    <div id="arq6_3" class="ramo" data-sigla="-" data-creditos="10" data-req="arq5_3" data-req-name="Arqueología Cuantitativa" onclick="toggle('arq6_3')">Arqueometría</div>
+                    <div id="arq6_4" class="ramo" data-sigla="-" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq6_4')">Arqueología de Chile I</div>
+                    <div id="arq6_5" class="ramo ofg" data-sigla="-" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq6_5')" oncontextmenu="editEditable(event, 'arq6_5')">OFG</div>
                 </div>
             </div>
         </div>
@@ -223,19 +223,19 @@
             <div class="semestres-wrapper">
                 <div class="semestre">
                     <div class="semestre-header">VII</div>
-                    <div id="arq7_1" class="ramo" data-sigla="-" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq7_1')">Arqueología Avanzada III</div>
-                    <div id="arq7_2" class="ramo" data-sigla="-" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq7_2')">Arqueologías Políticas y las Formas del Poder</div>
-                    <div id="arq7_3" class="ramo" data-sigla="-" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq7_3')">Laboratorio I</div>
-                    <div id="arq7_4" class="ramo" data-sigla="-" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq7_4')">Arqueología de Chile II</div>
-                    <div id="arq7_5" class="ramo optativo" data-sigla="-" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq7_5')" oncontextmenu="editEditable(event, 'arq7_5')">OPR</div>
+                    <div id="arq7_1" class="ramo" data-sigla="-" data-creditos="10" data-req="arq6_1" data-req-name="Arqueología Avanzada II" onclick="toggle('arq7_1')">Arqueología Avanzada III</div>
+                    <div id="arq7_2" class="ramo" data-sigla="-" data-creditos="10" data-req="arq6_2" data-req-name="Arqueologías Simbólicas y Materialidades" onclick="toggle('arq7_2')">Arqueologías Políticas y las Formas del Poder</div>
+                    <div id="arq7_3" class="ramo" data-sigla="-" data-creditos="10" data-req="arq6_3" data-req-name="Arqueometría" onclick="toggle('arq7_3')">Laboratorio I</div>
+                    <div id="arq7_4" class="ramo" data-sigla="-" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq7_4')">Arqueología de Chile II</div>
+                    <div id="arq7_5" class="ramo optativo" data-sigla="-" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq7_5')" oncontextmenu="editEditable(event, 'arq7_5')">OPR</div>
                 </div>
                 <div class="semestre">
                     <div class="semestre-header">VIII</div>
-                    <div id="arq8_1" class="ramo" data-sigla="-" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq8_1')">Arqueología de los Recursos Naturales</div>
-                    <div id="arq8_2" class="ramo" data-sigla="-" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq8_2')">Arqueologías Económicas y Consumo</div>
-                    <div id="arq8_3" class="ramo" data-sigla="-" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq8_3')">Laboratorio II</div>
-                    <div id="arq8_4" class="ramo" data-sigla="-" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq8_4')">Arqueología de Chile III</div>
-                    <div id="arq8_5" class="ramo optativo" data-sigla="-" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq8_5')" oncontextmenu="editEditable(event, 'arq8_5')">OPR</div>
+                    <div id="arq8_1" class="ramo" data-sigla="-" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq8_1')">Arqueología de los Recursos Naturales</div>
+                    <div id="arq8_2" class="ramo" data-sigla="-" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq8_2')">Arqueologías Económicas y Consumo</div>
+                    <div id="arq8_3" class="ramo" data-sigla="-" data-creditos="10" data-req="arq7_1" data-req-name="Arqueología Avanzada III" onclick="toggle('arq8_3')">Laboratorio II</div>
+                    <div id="arq8_4" class="ramo" data-sigla="-" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq8_4')">Arqueología de Chile III</div>
+                    <div id="arq8_5" class="ramo optativo" data-sigla="-" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq8_5')" oncontextmenu="editEditable(event, 'arq8_5')">OPR</div>
                 </div>
             </div>
         </div>
@@ -246,15 +246,15 @@
             <div class="semestres-wrapper">
                 <div class="semestre">
                     <div class="semestre-header">IX</div>
-                    <div id="arq9_1" class="ramo terminal" data-sigla="-" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq9_1')">Arqueología y Empresa</div>
-                    <div id="arq9_2" class="ramo terminal" data-sigla="-" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq9_2')">Arqueología y Ciencia</div>
-                    <div id="arq9_3" class="ramo terminal" data-sigla="-" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq9_3')">Arqueología y Políticas Públicas</div>
-                    <div id="arq9_4" class="ramo optativo" data-sigla="-" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq9_4')" oncontextmenu="editEditable(event, 'arq9_4')">OPR</div>
-                    <div id="arq9_5" class="ramo optativo" data-sigla="-" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq9_5')" oncontextmenu="editEditable(event, 'arq9_5')">OPR</div>
+                    <div id="arq9_1" class="ramo terminal" data-sigla="-" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq9_1')">Arqueología y Empresa</div>
+                    <div id="arq9_2" class="ramo terminal" data-sigla="-" data-creditos="10" data-req="arq8_3,arq8_2" data-req-name="Laboratorio II y Arqueologías Económicas y Consumo" onclick="toggle('arq9_2')">Arqueología y Ciencia</div>
+                    <div id="arq9_3" class="ramo terminal" data-sigla="-" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq9_3')">Arqueología y Políticas Públicas</div>
+                    <div id="arq9_4" class="ramo optativo" data-sigla="-" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq9_4')" oncontextmenu="editEditable(event, 'arq9_4')">OPR</div>
+                    <div id="arq9_5" class="ramo optativo" data-sigla="-" data-creditos="10" data-req-name="No tiene" onclick="toggle('arq9_5')" oncontextmenu="editEditable(event, 'arq9_5')">OPR</div>
                 </div>
                 <div class="semestre">
                     <div class="semestre-header">X</div>
-                    <div id="arq10_1" class="ramo terminal" data-sigla="-" data-creditos="10" data-req-name="Sin información" onclick="toggle('arq10_1')">Taller de Titulación</div>
+                    <div id="arq10_1" class="ramo terminal" data-sigla="-" data-creditos="10" data-req="arq9_2,arq9_1,arq9_3" data-req-name="Arqueología y Ciencia, Arqueología y Empresa y Arqueología y Políticas Públicas" onclick="toggle('arq10_1')">Taller de Titulación</div>
                 </div>
             </div>
         </div>
@@ -290,18 +290,34 @@
     function actualizar() {
         const ramos = document.querySelectorAll('.ramo');
         
-        ramos.forEach(r => {
-            const reqId = r.getAttribute('data-req');
-            if (reqId) {
-                const reqEl = document.getElementById(reqId);
-                if (reqEl && !reqEl.classList.contains('aprobado')) {
-                    r.classList.add('bloqueado');
-                    r.classList.remove('aprobado');
-                } else {
-                    r.classList.remove('bloqueado');
+        // Iteramos varias veces para propagar bloqueos en cascada (ej. del 1er año hasta el Taller de Titulación)
+        let huboCambio = true;
+        while (huboCambio) {
+            huboCambio = false;
+            ramos.forEach(r => {
+                const reqAttr = r.getAttribute('data-req');
+                if (reqAttr) {
+                    const reqIds = reqAttr.split(',').map(s => s.trim());
+                    const todosAprobados = reqIds.every(reqId => {
+                        const reqEl = document.getElementById(reqId);
+                        return reqEl && reqEl.classList.contains('aprobado');
+                    });
+
+                    if (!todosAprobados) {
+                        if (!r.classList.contains('bloqueado') || r.classList.contains('aprobado')) {
+                            r.classList.add('bloqueado');
+                            r.classList.remove('aprobado');
+                            huboCambio = true;
+                        }
+                    } else {
+                        if (r.classList.contains('bloqueado')) {
+                            r.classList.remove('bloqueado');
+                            huboCambio = true;
+                        }
+                    }
                 }
-            }
-        });
+            });
+        }
 
         let aprobados = 0;
         ramos.forEach(r => { if (r.classList.contains('aprobado')) aprobados++; });
@@ -318,11 +334,11 @@
                 creditos: r.getAttribute('data-creditos')
             };
         });
-        localStorage.setItem('malla_arqueologia_v1', JSON.stringify(save));
+        localStorage.setItem('malla_arqueologia_v2', JSON.stringify(save));
     }
 
     function cargar() {
-        const save = JSON.parse(localStorage.getItem('malla_arqueologia_v1'));
+        const save = JSON.parse(localStorage.getItem('malla_arqueologia_v2'));
         if (save) {
             Object.keys(save).forEach(id => {
                 const el = document.getElementById(id);
